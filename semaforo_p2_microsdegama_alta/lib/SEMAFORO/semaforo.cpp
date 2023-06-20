@@ -1,6 +1,5 @@
-#include <Arduino.h>
-#include <teclas.h>
-#include <semaforo.h>
+#include "Arduino.h"
+#include "teclas.h"
 #include <retardo.h>
 
 typedef enum{
@@ -11,9 +10,9 @@ typedef enum{
 
 fnsemaforo_t fnsemaforo;
 
-void fnormal(void){
-  /*fnsemaforo=NORMAL;*/
-  switch (fnsemaforo)
+void fnormal(void)
+{
+    switch (fnsemaforo)
   {
   case NORMAL:
     digitalWrite(LED_ROJO, HIGH);
@@ -42,5 +41,4 @@ void fnormal(void){
         fsmButtonError();
     break;
   }
-
 }
