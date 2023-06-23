@@ -1,13 +1,14 @@
 #include <Arduino.h>
 #include <teclas.h>
 #include <semaforo.h>
+#include <retardo.h>
+
 const int16_t LED_VERDE=2;
 const int16_t LED_AMARILLO=3;
 const int16_t LED_ROJO=4;
 const int16_t LED_AZUL=5;
 const int16_t SW1=10;
 const int16_t SW2=11;
-
 
 /******************************Functions prototypes*******************************/
 /******************************FuncIONES BOTON 1*******************************/

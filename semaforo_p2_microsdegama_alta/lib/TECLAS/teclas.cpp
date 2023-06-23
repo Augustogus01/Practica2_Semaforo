@@ -79,12 +79,11 @@ void buttonReleased(void){
 
 }
 /************************************************************************/
-/**********************Maquina de estados boton 2****************************************/
-void fsmButtonInit1(void){
-  fsmButtonState1=BUTTON_UP1;
-}
 
-void fsmButtonUpdate1(int16_t SWA){
+/**********************Maquina de estados boton 2 implementaciones*/
+
+void fsmButtonUpdate1(int16_t SWA)
+{
   switch (fsmButtonState1)
   {
   case BUTTON_UP1:
@@ -123,15 +122,25 @@ void fsmButtonUpdate1(int16_t SWA){
     break;
 
   }
+     
 }
 
-void fsmButtonError1(void){
-  fsmButtonState1=BUTTON_UP1;
+void fsmButtonInit1(void)
+{
+     fsmButtonState1=BUTTON_UP1;
 }
 
-void buttonPressed1(void){
-    fnsemaforo=NORMAL;
+void fsmButtonError1(void)
+{
+  fsmButtonState1=BUTTON_UP1;   
 }
-void buttonReleased1(void){
-    fnsemaforo=NORMAL;
+
+void buttonPressed1(void)
+{
+   fnsemaforo=NORMAL;    
+}
+
+void buttonReleased1(void)
+{
+    fnsemaforo=NORMAL;   
 }
